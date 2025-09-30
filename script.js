@@ -1,5 +1,10 @@
 
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
 
 
         // Smooth scrolling for navigation links
@@ -38,7 +43,9 @@
             const whatsappMessage = `Hello FF Brothers Welding!%0A%0AMy name is ${name}.%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
             
             // Redirect to WhatsApp
-            window.open(`https://wa.me/923343383652?text=${whatsappMessage}`, '_blank');
+          window.open(`https://wa.me/923472653247?text=${whatsappMessage}`, '_blank');
+
+
             
             // Reset form
             this.reset();

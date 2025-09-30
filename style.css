@@ -39,7 +39,7 @@
             color: #ff9900;
             
         } */
-        .logo img{
+        /* .logo img{
             width: 100px;
             height: 100px;
             flex: 1;
@@ -49,8 +49,23 @@
             margin-left: -50px;
           
         
-        }
-      
+        } */
+        .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: black;
+    display: block;
+}
+@media (max-width: 768px) {
+  .logo {
+    text-align: center;
+    width: 50;
+  }
+  .logo img {
+    margin: 0 auto; /* bilkul center */
+  }
+}   
         
         nav {
             display: flex;
@@ -72,13 +87,53 @@
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
-            border: 20px;
+            
         }
         
-        .nav-links  a:hover {
-            /* background-color: white; */
-            color:  #ff9900; 
-        }
+        .nav-links  a:hover{
+            color: #ff9900
+            
+    }
+
+    /* Default (PC) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    /* background: #222; */
+    position: absolute;
+    top:80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size:30px;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+/* By default toggle hidden (only mobile par show) */
+.menu-toggle {
+  display: flex;
+}
+
         
         /* Hero Section with Video */
         .hero {
